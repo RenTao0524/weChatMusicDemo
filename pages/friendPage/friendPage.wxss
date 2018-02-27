@@ -1,0 +1,50 @@
+.flex-box-friend {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #f4f4f4;
+  margin: 20rpx 0;
+}
+
+.flex-box-friend-item {
+  text-align: center;
+  background-color: #ffffff;
+  width: 49.75%;
+}
+
+.flex-box-friend-item .topIcon {
+  color: #e42929;
+  margin: 0 20rpx;
+}
+/* 空白区样式 */
+.blank {
+  height: 10px;
+  background: #f4f4f4;
+}
+
+.video-view {
+  margin: 15px 0 10px;
+  border-bottom: 1px solid #c2c2c2;
+}
+/* 头像样式 */
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin: 0 20rpx;
+  float: left;
+}
+
+.info-view {
+  float: left;
+}
+
+.guanzhuButton {
+  font-size: 14px;
+  background-color: #e42929;
+  color: #ffffff;
+  padding: 0 20rpx;
+  border-radius: 30rpx;
+  line-height: 1.5;
+}

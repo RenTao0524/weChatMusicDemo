@@ -1,0 +1,93 @@
+<template name="music">
+  <wxs src="./musicPage.wxs" module="musicPage" />
+
+  <view>
+    <!-- 轮播图 -->
+    <view>
+      <swiper indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="#e42929"
+        autoplay="{{true}}" current="{{0}}" interval="{{2000}}" circular="{{true}}">
+        <block wx:for="{{musicPage.banners}}" wx:key="{{item}}">
+          <swiper-item>
+            <image src="{{item.pic}}" class="slide-image" style='width:100%'/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!-- 活动推荐 -->
+    <view class="flex-box">
+      <view wx:for="{{musicPage.menu}}" wx:key="{{item.text}}" class="flex-box-item" style="margin: 10px 0px;">
+        <text class="iconfont {{item.icon}}" style="font-size:30px;margin: 0rpx 10rpx 0rpx 20rpx;padding:5px;color: red;border:1px solid red;border-radius:25px;"></text>
+        <view style="height:10px;"></view>
+        <text>{{item.text}}</text>
+      </view>
+    </view>
+
+    <view class="line-css"></view>
+
+    <!-- 推荐歌单 -->
+    <view style="margin: 15px 0px;">
+      <text style="font-size:18px;">{{musicPage.recommendPlaylist.title}}</text>
+      <view class="flex-box">
+        <view wx:for="{{musicPage.recommendPlaylist.result}}" wx:key="{{item.id}}" style="width:33%;margin:10px 0px;">
+          <image src="{{item.picUrl}}" style='width:100%;height:100px;'/>
+          <label style="font-size:12px;display:block;">{{item.name}}</label>
+        </view>
+      </view>
+    </view>
+
+    <!-- 独家放送 -->
+    <view style="margin: 15px 0px;">
+      <text style="font-size:18px;">{{musicPage.exclusiveList.title}}</text>
+      <view class="flex-box">
+        <view wx:for="{{musicPage.exclusiveList.result}}" wx:key="{{item.id}}" style="width:49.75%;margin:10px 0px;">
+          <view wx:if="{{item.type === 24}}">
+            <image src="{{item.picUrl}}" style='width:100%;height:100px;'/>
+            <label style="font-size:12px;display:block;">{{item.name}}</label>
+          </view>
+        </view>
+      </view>
+      <view style="width:100%;margin:-10px 0px 10px;">
+        <image src="{{musicPage.exclusiveList.result[2].picUrl}}" style='width:100%;height:150px;'/>
+        <label style="font-size:12px;display:block;">{{musicPage.exclusiveList.result[2].name}}</label>
+      </view>
+    </view>
+
+    <!-- 最新音乐 -->
+    <view style="margin: 15px 0px;">
+      <text style="font-size:18px;">{{musicPage.newSongList.title}}</text>
+      <view class="flex-box">
+        <view wx:for="{{musicPage.newSongList.result}}" wx:key="{{item.id}}" style="width:33%;margin:10px 0px;">
+          <image src="{{item.picUrl}}" style='width:100%;height:100px;'/>
+          <label style="font-size:12px;display:block;">{{item.name}}</label>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 推荐MV -->
+    <view style="margin: 15px 0px;">
+      <text style="font-size:18px;">{{musicPage.mvList.title}}</text>
+      <view class="flex-box">
+        <view wx:for="{{musicPage.mvList.result}}" wx:key="{{item.id}}" style="width:49.75%;margin:10px 0px;">
+          <image src="{{item.picUrl}}" style='width:100%;height:100px;'/>
+          <label style="font-size:12px;display:block;">{{item.name}}</label>
+        </view>
+      </view>
+    </view>
+
+    <!-- 主播电台 -->
+    <view style="margin: 15px 0px;">
+      <text style="font-size:18px;">{{musicPage.radioStationList.title}}</text>
+      <view class="flex-box">
+        <view wx:for="{{musicPage.radioStationList.result}}" wx:key="{{item.id}}" style="width:33%;margin:10px 0px;">
+          <image src="{{item.picUrl}}" style='width:100%;height:100px;'/>
+          <label style="font-size:12px;display:block;">{{item.name}}</label>
+        </view>
+      </view>
+    </view>
+
+    <view>
+      <button>调整栏目顺序</button>
+      <text>看视频，发现更多有趣内容</text>
+    </view>
+  </view>
+</template>

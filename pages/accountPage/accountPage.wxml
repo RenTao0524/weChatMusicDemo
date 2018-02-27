@@ -1,0 +1,41 @@
+<!-- 头像、名称、签到等信息 -->
+<view>
+  <image src='{{userInfo.avatarUrl}}' class='userinfo-avatar' bindtap='changeAvatar'></image>
+
+  <view class='userinfo-name'>
+    <text>{{userInfo.nickName}}</text>
+    <button class='grade'>Lv.9999</button>
+  </view>
+  
+  <button class='sign-in'>
+    <label class='iconfont icon-jifen colorStyle'></label>
+    签到
+  </button>
+</view>
+<view class="line-css"></view>
+<!-- 动态、关注、粉丝、我的资料 -->
+<view class='flex-box-account'>
+  <view wx:for="{{userList}}" class="flex-box-account-item" wx:key="item.label">
+    <text class="iconfont {{item.icon}}" style='color: #948888;'></text>
+    <text class='label'>{{item.label}}</text>
+    <text class='amount'>{{item.amount}}</text>
+  </view>
+</view>
+<view class="blank"></view>
+  
+<view wx:for="{{modules}}" wx:for-item="children" wx:key="index"> 
+  <view wx:for="{{children.children}}" wx:for-item="childrenItem" wx:key="item.icon">
+    <view class='account-view'>
+      <text class="iconfont {{childrenItem.icon}} account-icon"></text>
+      <text>{{childrenItem.label}}</text>
+      <switch wx:if="{{childrenItem.switchButton}}" checked bindchange="switchChange" color="red" class='styleSwitch'/>
+      <text wx:else class="iconfont icon-forward forward-icon"></text>
+    </view>
+    <view wx:if="{{!childrenItem.line}}" class="line-css"></view>
+  </view>
+  <view class="blank"></view>
+</view>
+
+<view>
+  <button bindtap='logOut' class='exitButton'>退出登录</button>
+</view>

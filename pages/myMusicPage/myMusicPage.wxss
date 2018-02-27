@@ -1,0 +1,57 @@
+/* pages/myMusicPage/myMusicPage.wxss */
+.header {
+  padding: 20rpx 0;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.header-icon {
+  margin: 0 20rpx;
+  font-size: 20px;
+  color: #e42929;
+}
+
+.header-view {
+  display: inline;
+}
+
+.count-style {
+  margin-right: 20rpx;
+  float: right;
+  color: #948888;
+}
+
+.creat-view {
+  background-color: #f4f4f4;
+  padding: 10rpx 0;
+  color: #948888;
+}
+
+.song-list {
+  position: relative;
+  margin: 10rpx;
+}
+.songImage {
+  height: 128rpx;
+  width: 128rpx;
+}
+
+.content-view {
+  position: absolute;
+  height: 100%;
+  width: 330px;
+  top: 0;
+  left: 143rpx;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.song-count {
+  font-size: 14px;
+  color: #948888;
+}
+
+.yinliang-icon {
+  position: absolute;
+  top: 23.5px;
+  right: 40rpx;
+  font-size: 20px;
+}

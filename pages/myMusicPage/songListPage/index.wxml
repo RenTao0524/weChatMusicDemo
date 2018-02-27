@@ -1,0 +1,37 @@
+<!--pages/myMusicPage/songListPage/index.wxml-->
+<!-- 头部 -->
+<view class='header'>
+  <image src='{{playlist.tracks[0].al.picUrl}}' class='picStyle'>
+  </image>
+
+  <view class='info-style'>
+    <text style='color: #ffffff;'>随身听</text>
+    <view></view>
+    <image src='{{playlist.creator.avatarUrl}}' class='pic-image'></image>
+    <text class='nick-name'>{{playlist.creator.nickname}}</text>
+    <text class='iconfont icon-forward nick-name'></text>
+  </view>
+</view>
+
+<view class='flex-box' style='background-color: #8b36ca;'>
+  <view wx:for='{{operateList}}' wx:key='{{item.icon}}' class='flex-box-item' style='color: #ffffff;'>
+    <text class='iconfont {{item.icon}}' style='font-size: 24px;'></text>
+    <view></view>
+    <text>{{item.name}}</text>
+  </view>
+</view>
+
+<view style='border-bottom: 1px solid #f4f4f4;padding: 20rpx 0;'>
+  <text class='iconfont icon-bofang' style='margin: 10rpx;font-size: 18px;'></text>
+  <text>播放全部</text>
+  <text style='color:#948888;font-size:16px;'>(共74首)</text>
+</view>
+
+<view wx:for="{{playlist.tracks}}" wx:key='{{item.id}}' data-songName='{{item.name}}' bindtap='playSong' class='songList'>
+  <text style='font-size: 20px; margin: 0 10rpx;color:#948888;text-align: center'>{{index + 1}}</text>
+  <view class='song-detail'>
+    <text>{{item.name}}</text>
+    <view></view>
+    <text style='color:#948888;font-size:14px;'>{{item.ar[0].name}}-{{item.name}}</text>
+  </view>
+</view>

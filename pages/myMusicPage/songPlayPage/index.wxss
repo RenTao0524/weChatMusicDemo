@@ -1,0 +1,43 @@
+/* pages/myMusicPage/songPlayPage/index.wxss */
+.bofangqi1 {
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+  /* border: 20px solid #a79da4; */
+  background-color: #a79da4;
+  position: relative;
+}
+
+.bofangqi2 {
+  top: 20px;
+  left: 20px;
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  border: 60px solid #423e41;
+  z-index: 9998;
+}
+
+.bofangqi3 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  z-index: 9999;
+}
+
+@keyframes rotation{
+from {transform: rotate(0deg);}
+to {transform: rotate(360deg);}
+}
+
+.Rotation{
+transform: rotate(360deg);
+animation: rotation 6s linear infinite;
+-moz-animation: rotation 6s linear infinite;
+-webkit-animation: rotation 6s linear infinite;
+-o-animation: rotation 6s linear infinite;
+}

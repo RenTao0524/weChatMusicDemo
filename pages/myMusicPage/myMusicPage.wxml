@@ -1,0 +1,31 @@
+<!-- 顶部 -->
+<view wx:for='{{headerData}}' wx:key='{{item.name}}' class='header'>
+  <navigator url="{{item.url}}" hover-class="none">
+    <text class='iconfont {{item.icon}} header-icon'></text>
+    <view class='header-view'>
+      <text>{{item.name}}</text>
+      <view class='count-style'>
+        <text style='margin-right: 10rpx;'>{{item.count}}</text>
+        <text class='iconfont icon-forward' style='font-size: 16px;'></text>
+      </view>
+    </view>
+  </navigator>
+</view>
+
+<view class='creat-view'>
+  <text bindtap='showSongList' class='iconfont icon-xiajiantou' style='margin:0 10rpx;font-size:18px;'></text>
+  <text>我创建的歌单(8)</text>
+  <text class='iconfont icon-more' bindtap='songEdit' style='float:right; margin-right: 40rpx; font-size: 18px;'></text>
+</view>
+
+<!-- 创建的歌单列表 -->
+<view hidden='{{songListShow}}'data-songMenu='{{item.name}}' bindtap='songMenu' wx:for='{{playlist}}' wx:key='{{item.id}}' class='song-list'>
+  <image src='{{item.coverImgUrl}}' class='songImage' mode='aspectFit'></image>
+  <view class='content-view'>
+    <view style='height: 15rpx;'></view>
+    <text>{{item.name}}</text>
+    <view></view>
+    <text class='song-count'>{{item.trackCount}}首</text>
+    <text class='iconfont icon-icon- yinliang-icon'></text>
+  </view>
+</view>

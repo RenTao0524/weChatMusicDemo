@@ -1,0 +1,48 @@
+/* pages/myMusicPage/songListPage/index.wxss */
+.header {
+  height: 300rpx;
+  background-color: #8b36ca;
+}
+
+.picStyle {
+  width: 256rpx;
+  height: 256rpx;
+  margin: 20rpx;
+  float: left;
+}
+
+.info-style {
+  float: left;
+  margin-top: 40rpx;
+}
+
+.pic-image {
+  margin-top: 20rpx;
+  height: 64rpx;
+  width:64rpx;
+  border-radius: 50%;
+}
+
+.nick-name {
+  margin-left: 10rpx;
+  color: #cbb;
+  font-size:16px;
+  position: relative;
+  top: -20rpx;
+}
+
+.songList {
+  position: relative;
+  margin: 30rpx 0rpx;
+}
+
+.song-detail {
+  position: absolute;
+  width: 380px;
+  padding-bottom: 5rpx;
+  /* height:  */
+  top: 0px;
+  left: 34px;
+  line-height: 1;
+  border-bottom: 1px solid #f4f4f4;
+}

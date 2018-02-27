@@ -1,0 +1,5 @@
+<template name="radio">
+  <view>
+    <text>电台</text>
+  </view>
+</template>

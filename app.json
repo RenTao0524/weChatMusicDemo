@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/myMusicPage/myMusicPage",
+    "pages/friendPage/friendPage",
+    "pages/accountPage/accountPage",
+    "pages/friendPage/releaseMessage/index",
+    "pages/friendPage/releaseVideo/index",
+    "pages/myMusicPage/localMusicPage/index",
+    "pages/myMusicPage/recentPlayPage/index",
+    "pages/myMusicPage/myRadioPage/index",
+    "pages/myMusicPage/myCollectPage/index",
+    "pages/myMusicPage/songListPage/index",
+    "pages/myMusicPage/songPlayPage/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#e42929",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#a29296",
+    "selectedColor": "#ffffff",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现音乐",
+        "iconPath": "pages/index/found.png",
+        "selectedIconPath": "pages/index/found_active.png"
+      },
+      {
+        "pagePath": "pages/myMusicPage/myMusicPage",
+        "text": "我的音乐",
+        "iconPath": "pages/myMusicPage/myMusic.png",
+        "selectedIconPath": "pages/myMusicPage/myMusic_active.png"
+      },
+      {
+        "pagePath": "pages/friendPage/friendPage",
+        "text": "朋友",
+        "iconPath": "pages/friendPage/friend.png",
+        "selectedIconPath": "pages/friendPage/friend_active.png"
+      },
+      {
+        "pagePath": "pages/accountPage/accountPage",
+        "text": "账户",
+        "iconPath": "pages/accountPage/account.png",
+        "selectedIconPath": "pages/accountPage/account_active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

@@ -1,0 +1,25 @@
+<!--pages/myMusicPage/songPlayPage/index.wxml-->
+<view style='background-color:#e894d2;height: 736px;text-align:center;'>
+  <view style='height: 64rpx;'></view>
+  <image class='bofangqi1'>
+    <image class='bofangqi2'>
+      <image src="{{poster}}" mode='aspectFit' class='bofangqi3 {{Rotation}}'></image>
+    </image>
+  </image>
+
+  <view class='flex-box' style='margin: 40rpx 0;'>
+    <view wx:for='{{itemList}}' wx:key='{{item}}' class='flex-box-item'>
+      <text class='iconfont {{item}}' style='font-size:24px; color: #ffffff;'></text>
+    </view>
+  </view>
+
+  <progress percent="{{percent}}" />
+
+   <view class='flex-box' style='margin: 60rpx 0;'>
+    <view wx:for='{{bofangList}}' wx:key='{{item.icon}}' bindtap='{{item.event}}' class='flex-box-item'>
+      <text class='iconfont {{item.icon}}' style='font-size:36px; color: #ffffff;'></text>
+    </view>
+  </view>
+
+  <audio poster="{{poster}}" name="{{name}}" bindtimeupdate='timeupdate' author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+</view>

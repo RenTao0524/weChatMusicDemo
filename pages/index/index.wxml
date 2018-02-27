@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<import src="./music/musicPage.wxml"/>
+<import src="./video/videoPage.wxml"/>
+<import src="./radio/radioPage.wxml"/>
+<view>
+  <view class="flex-box" style="position: fixed; top: 0; z-index: 9999;background-color:#f5f5f5">
+    <view class="flex-box-item header" style="color:{{item.color}};" wx:for="{{navigationBarData}}" wx:key="item.text" data-url = "{{item.url}}" bindtap="changeNav">
+      <text>{{item.text}}</text>
+    </view>
+  </view>
+  <view style="height:43px;"></view>
+  <template is="{{navItem}}"/>
+</view>

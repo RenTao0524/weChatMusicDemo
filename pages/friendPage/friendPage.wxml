@@ -1,0 +1,43 @@
+<!-- 顶部 -->
+<view class="flex-box-friend">
+  <view wx:for="{{pageTopList}}" wx:key="{{item.icon}}" class="flex-box-friend-item">
+    <navigator url="{{item.url}}" hover-class="none">
+      <text class='iconfont {{item.icon}} topIcon'></text>
+      <text>{{item.text}}</text> 
+    </navigator>
+  </view>
+</view>
+<view class='blank'></view>
+
+<view wx:for="{{dynamicDataList}}" wx:key="{{item.id}}" class='video-view'>
+  <view>
+    <image src='{{item.cover}}' mode='aspectFill' class='userinfo-avatar'></image>
+    <view style='info-view'>
+      <view style='float:left'>
+        <text style='margin-right: 20rpx;color:#2138d0;'>{{item.artistName}}</text>
+        <text>发布视频:</text>
+        <view></view>
+        <text style='font-size: 12px; color:#c2c2c2;'>最近</text>
+      </view>
+      <view style='float:right; margin: 20rpx 20rpx 0 0;'>
+        <button class='guanzhuButton'>
+          <text class='iconfont icon-guanzhu'></text>
+          关注
+        </button>
+      </view>
+    </view>
+  </view>
+  <view style='margin-left: 140rpx; clear: both;'>
+    <view>{{item.briefDesc}}</view>
+    <video src="{{item.videoSrc}}" controls></video>
+    <view style='font-size: 12px; color:#c2c2c2;'>——— {{item.name}}</view>
+    <view style='font-size: 12px; color:#c2c2c2; margin: 20rpx 0;'>
+      <text class='iconfont icon-dianzan'></text>
+      <text style='margin-right: 40rpx;'>{{item.playCount}}</text>
+      <text class='iconfont icon-pinglun'></text>
+      <text style='margin-right: 40rpx;'>{{item.playCount}}</text>
+      <text class='iconfont icon-fenxiang'></text>
+      <text>{{item.playCount}}</text>
+    </view>
+  </view>
+</view>

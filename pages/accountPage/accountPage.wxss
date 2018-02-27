@@ -1,0 +1,101 @@
+/* pages/accountPage/accountPage.wxss */
+/* 头像样式 */
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 10rpx 20rpx;
+  border-radius: 50%;
+}
+/* 用户名和等级样式 */
+.userinfo-name {
+  display: inline;
+  position: absolute;
+  padding-top: 27rpx; 
+}
+.userinfo-name .grade {
+  text-align: center;
+  font-style: italic;
+  font-weight: bold; 
+  font-size: 10px;
+  color: #948888;
+  border: 1px solid #948888;
+  line-height: 2;
+  background-color: #ffffff;
+  padding: 0 10rpx;
+  border-radius: 25rpx; 
+}
+/* 签到样式 */
+.sign-in {
+  display: inline;
+  position: absolute;
+  padding: 0 20rpx;
+  line-height: 1.5;
+  font-size: 14px;
+  top: 55.8rpx;
+  right: 20rpx;
+  background-color: #ffffff;
+  border-radius: 30rpx;
+  color: #e42929;
+  border: 1px solid #e42929;
+}
+
+/* 空白区样式 */
+.blank {
+  height: 15px;
+  background: #f4f4f4;
+}
+
+/* 弹性盒子样式 */
+.flex-box-account {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #f4f4f4;
+  margin: 10rpx 0;
+}
+
+/* 弹性子元素 动态 关注等 */
+.flex-box-account-item {
+  text-align: center;
+  width: 24.75%;
+  background-color: #ffffff;
+}
+
+.flex-box-account-item .label {
+  display: block;
+  color: #948888;
+  font-size:14px;
+}
+
+.flex-box-account-item .amount {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.account-view {
+  padding: 8px 0;
+}
+
+.account-view .account-icon {
+  color: #948888;
+  margin: 0 20rpx;
+}
+
+.account-view .forward-icon {
+  float: right; 
+  color: #948888;
+  margin: 0 10rpx;
+  font-size: 20px;
+}
+
+.account-view .styleSwitch {
+   float: right; 
+   margin-right: 10rpx;
+   margin-top: -5.5px;
+}
+/* 退出按钮 */
+.exitButton {
+  color: #e42929;
+  background-color: #ffffff;
+}
